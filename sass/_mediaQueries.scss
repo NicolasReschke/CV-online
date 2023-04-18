@@ -1,0 +1,50 @@
+// 320px
+@media (max-width: 768px){
+
+    // Menu
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: $menu-mobile-background-color;
+        color: $text-color-inverse;
+        // height: 100%;
+        overflow-y: auto;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        li{
+            padding: 0;
+            a{
+                color: $text-color-inverse;
+                line-height: 60px;
+            }
+        }
+
+    }
+
+    .open-menu, .close-menu{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    .close-menu{
+        align-self: flex-end;
+        padding: 20px 25px;
+    }
+    .open-menu{
+        padding: 0 15px;
+    }
+
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+}

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Merriweather+Sans&family=Open+Sans&family=Ubuntu&display=swap");
+.topheader {
+  box-shadow: 0 4px 5px rgb(202, 202, 202);
+  position: fixed;
+  background-color: white;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 18px;
+  font-weight: 500;
+  color: rgb(170, 0, 0);
+}
+.logo img, .logo div {
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 0 15px;
+}
+.menu li a {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.open-menu, .close-menu {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  background-color: white;
+  text-decoration-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .menu li {
+    padding: 0;
+  }
+  .menu li a {
+    color: white;
+    line-height: 60px;
+  }
+  .open-menu, .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 25px;
+  }
+  .open-menu {
+    padding: 0 15px;
+  }
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+}/*# sourceMappingURL=style.css.map */
