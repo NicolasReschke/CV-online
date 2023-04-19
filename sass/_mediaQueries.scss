@@ -13,7 +13,6 @@
         color: $text-color-inverse;
         // height: 100%;
         overflow-y: auto;
-
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
@@ -21,7 +20,8 @@
             padding: 0;
             a{
                 color: $text-color-inverse;
-                line-height: 60px;
+                line-height: 70px;
+                font-size: 25px;
             }
         }
 
@@ -32,7 +32,6 @@
         border: none;
         background: none;
         cursor: pointer;
-
     }
 
     .close-menu{
@@ -42,9 +41,81 @@
     .open-menu{
         padding: 0 15px;
     }
-
     .menu_opened{
         opacity: 1;
         pointer-events: all;
     }
+
+
+    .menu a::after{
+        content: none;
+    }
+    .menu a:hover,
+    .menu a.selected{
+        color: $secondary-color;
+    }
+    
+    .menu a:hover{
+        color: $secondary-color;
+    }
+}
+
+@media (min-width: 950px) {
+    .profile{
+        text-align: left;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        max-width: 980px;
+        margin: 0 auto;
+        .profile-info{
+            margin-bottom: 0px;
+            .profile-title{
+                font-size: 60px;
+            }
+            .profile-details{
+                font-size: 25px;
+                margin: 30px 0;
+            }
+            .profile-btn{
+                font-size: 30px;
+                padding: 0.5em 1em;
+            }
+        }
+        .profile-img-section{
+            position: relative;
+            display: inline;
+            .profile-img{
+                width: 100%;
+                max-width: 350px;
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    .skills{
+        max-width: 980px;
+        margin: 0 auto;
+        .skills-title{
+            font-size: 50px;
+        }
+        .skill-list{
+            .skills-skill{
+                font-size: 30px;
+                margin: 20px;
+            }
+        }
+    }
+
 }

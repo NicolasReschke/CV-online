@@ -6,6 +6,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .topnav {
@@ -21,7 +22,7 @@
   align-items: center;
   font-weight: 18px;
   font-weight: 500;
-  color: rgb(170, 0, 0);
+  color: rgb(28, 58, 156);
 }
 .logo img, .logo div {
   padding: 0 10px;
@@ -37,15 +38,40 @@
   padding: 0 15px;
 }
 .menu li a {
+  position: relative;
   color: black;
   font-size: 18px;
   font-weight: 500;
   line-height: 50px;
   text-transform: uppercase;
 }
+.menu li ahover {
+  color: rgb(28, 58, 156);
+}
 
 .open-menu, .close-menu {
   display: none;
+}
+
+.menu a::after {
+  content: "";
+  background-color: rgb(219, 160, 32);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover {
+  color: rgb(28, 58, 156);
 }
 
 * {
@@ -55,14 +81,96 @@
 }
 
 body {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   background-color: white;
   text-decoration-color: black;
+  padding-top: 80px;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.horizontal-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.vertical-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.profile {
+  text-align: center;
+}
+.profile .profile-info {
+  margin-bottom: 25px;
+}
+.profile .profile-info .profile-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+  color: rgb(28, 58, 156);
+  font-family: "Merriweather Sans", sans-serif;
+}
+.profile .profile-info .profile-details {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 450px;
+  margin: 20px auto;
+}
+.profile .profile-info .profile-btn {
+  background-color: rgb(28, 58, 156);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.profile .profile-info .profile-btn:hover {
+  filter: brightness(150%);
+}
+.profile .profile-img-section {
+  position: relative;
+  display: inline;
+}
+.profile .profile-img-section .profile-img {
+  width: 80%;
+  max-width: 300px;
+}
+.profile .profile-img-section .profile-img-line {
+  background-color: rgb(219, 160, 32);
+  height: 15px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.skills .skills-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.skills .skill-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills .skill-list .skills-skill {
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  padding: 0.5em 0.7em;
+  margin: 10px;
 }
 
 @media (max-width: 768px) {
@@ -85,7 +193,8 @@ a {
   }
   .menu li a {
     color: white;
-    line-height: 60px;
+    line-height: 70px;
+    font-size: 25px;
   }
   .open-menu, .close-menu {
     display: block;
@@ -103,5 +212,67 @@ a {
   .menu_opened {
     opacity: 1;
     pointer-events: all;
+  }
+  .menu a::after {
+    content: none;
+  }
+  .menu a:hover,
+  .menu a.selected {
+    color: rgb(219, 160, 32);
+  }
+  .menu a:hover {
+    color: rgb(219, 160, 32);
+  }
+}
+@media (min-width: 950px) {
+  .profile {
+    text-align: left;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .profile .profile-info {
+    margin-bottom: 0px;
+  }
+  .profile .profile-info .profile-title {
+    font-size: 60px;
+  }
+  .profile .profile-info .profile-details {
+    font-size: 25px;
+    margin: 30px 0;
+  }
+  .profile .profile-info .profile-btn {
+    font-size: 30px;
+    padding: 0.5em 1em;
+  }
+  .profile .profile-img-section {
+    position: relative;
+    display: inline;
+  }
+  .profile .profile-img-section .profile-img {
+    width: 100%;
+    max-width: 350px;
+    transform: scaleX(-1);
+  }
+  .horizontal-padding {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .vertical-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .skills {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .skills .skills-title {
+    font-size: 50px;
+  }
+  .skills .skill-list .skills-skill {
+    font-size: 30px;
+    margin: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

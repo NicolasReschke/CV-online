@@ -11,12 +11,23 @@
     }
 
 body{
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background-color: $theme-color;
     text-decoration-color: $text-color;
+    padding-top: 80px;
 }
 
 a{
     text-decoration: none;
     color: $text-color;
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding{
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
