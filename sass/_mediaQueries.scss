@@ -61,6 +61,8 @@
 }
 
 @media (min-width: 950px) {
+
+    // PROFILE //
     .profile{
         text-align: left;
         align-items: center;
@@ -103,7 +105,7 @@
         padding-bottom: 70px;
     }
 
-
+    // SKILLS //
     .skills{
         max-width: 980px;
         margin: 0 auto;
@@ -116,6 +118,69 @@
                 margin: 20px;
             }
         }
+    }
+
+    // EXPERIENCES //
+    .experiences{
+        .experiences-body{
+            .experiences-title{
+                font-size: 50px;
+                margin: 35px 0;
+            }
+            .experiences-grid{
+                display: grid;
+                grid-template-columns: auto 2px auto;
+                gap: 20px 70px;
+                padding: 70px;
+                justify-content: center;
+                max-width: 980px;
+                margin: 0 auto;
+                .experience{
+                    padding: 0;
+                    .experience-date{
+                        font-size: 40px;
+                    }
+                    .experience-company{
+                        font-size: 25px;
+                    }
+                    .experience-position{
+                        font-weight: bold;
+                        font-size: 20px;
+                        margin-top: 20px;
+                    }
+                    .experience-description{
+                        font-size: 20px;
+                        margin-top: 10px;
+                        line-height: 1.3;
+                    }
+                }
+                .experience-left{
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .line{
+        background-color: $text-color-inverse;
+        position: relative;
+        }
+    .line::before,
+    .line::after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $text-color-inverse;
+        border-radius: 50%;
+
+        position: absolute;
+        top: -20px;
+        left: -9px;
+    }
+    .line::after{
+        top: 100%;
+        z-index: 1;
     }
 
 }
