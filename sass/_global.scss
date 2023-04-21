@@ -10,11 +10,19 @@
     font-size: 100%;
     }
 
+html{
+    scroll-behavior: smooth;
+}
+
+section[id]{
+    scroll-padding-top: 70px;
+}
+
 body{
     font-family: 'Ubuntu', sans-serif;
     background-color: $theme-color;
     text-decoration-color: $text-color;
-    padding-top: 80px;
+    padding-top: 70px;
 }
 
 a{
