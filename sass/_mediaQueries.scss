@@ -24,15 +24,18 @@
                 font-size: 25px;
             }
         }
-
     }
 
-    .open-menu, .close-menu{
+    .open-menu, .close-menu, .close-menu-social{
         display: block;
         border: none;
         background: none;
         cursor: pointer;
     }
+
+    // .close-menu-social img{
+    //     bottom: 0;
+    // }
 
     .close-menu{
         align-self: flex-end;

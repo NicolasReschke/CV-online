@@ -49,7 +49,7 @@
   color: rgb(28, 58, 156);
 }
 
-.open-menu, .close-menu {
+.open-menu, .close-menu, .close-menu-social {
   display: none;
 }
 
@@ -338,7 +338,7 @@ a {
     line-height: 70px;
     font-size: 25px;
   }
-  .open-menu, .close-menu {
+  .open-menu, .close-menu, .close-menu-social {
     display: block;
     border: none;
     background: none;
