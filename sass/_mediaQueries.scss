@@ -16,6 +16,9 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
+        .li-switch{
+            margin: 40px 0;
+        }
         li{
             padding: 0;
             a{
@@ -122,6 +125,24 @@
             }
         }
     }
+    // SOFT SKILLS //
+    .skills{
+        max-width: 980px;
+        margin: 0 auto;
+        .skills-title{
+            font-size: 50px;
+        }
+        .skill-softlist{
+            display: grid;
+            grid-template-columns: 400PX auto;
+            .skills-softskill{
+                list-style: none;
+                font-size: 30px;
+                margin: 20px;
+            }
+        }
+    }
+
 
     // EXPERIENCES //
     .experiences{
@@ -197,43 +218,43 @@
         box-sizing: border-box;
     }
     
-      .contact-title {
+    .contact-title {
         font-size: 35px;
         text-align: left;
-      }
+    }
     
-      .social-list {
+    .social-list {
         justify-content: flex-start;
-      }
+    }
     
-      .social-list img {
+    .social-list img {
         height: 35px;
-      }
+    }
     
-      .contact-title {
+    .contact-title {
         grid-area: title;
-      }
+    }
     
-      .contact-details {
+    .contact-details {
         grid-area: details;
-      }
+    }
     
-      .contact-form {
+    .contact-form {
         grid-area: form;
-      }
+    }
     
-      .social {
+    .social {
         grid-area: social;
-      }
+    }
     
-      .contact {
+    .contact {
         display: grid;
         grid:
-          "title   form" auto
-          "details form" 1fr
-          "social  form" auto /
-          1fr      1fr;
-        align-items: start;
-      }
+        "title   form" auto
+        "details form" 1fr
+        "social  form" auto /
+        1fr      1fr;
+    align-items: start;
+    }
 
 }
